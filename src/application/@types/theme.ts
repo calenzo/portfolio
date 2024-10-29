@@ -10,8 +10,13 @@ interface IMedia {
   desktop_fullhd: string;
 }
 
+export enum ITypeTheme {
+  dark = "dark",
+  white = "white",
+}
+
 export interface ITheme {
-  dark: {
+  [ITypeTheme.dark]: {
     media: IMedia;
     colors: {
       primary: string;
@@ -19,7 +24,7 @@ export interface ITheme {
       text: string;
     };
   };
-  white: {
+  [ITypeTheme.white]: {
     media: IMedia;
     colors: {
       primary: string;
