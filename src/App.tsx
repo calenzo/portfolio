@@ -1,22 +1,20 @@
-import { useState } from "react";
-import { ThemeProvider } from "styled-components";
-
 import { Layout } from "./views/components";
 
+import { AppProvider } from "./application/contexts/app";
+import { ThemeProvider } from "./application/contexts/theme";
+
 import { Routes } from "./routes";
-import { GlobalStyles, theme } from "./styles";
+import { GlobalStyles } from "./styles";
 
-function App() {
-  const [currentTheme] = useState<"dark" | "white">("dark");
-
-  return (
-    <ThemeProvider theme={theme[currentTheme]}>
+const App = () => (
+  <AppProvider>
+    <ThemeProvider>
       <GlobalStyles />
       <Layout>
         <Routes />
       </Layout>
     </ThemeProvider>
-  );
-}
+  </AppProvider>
+);
 
 export default App;
