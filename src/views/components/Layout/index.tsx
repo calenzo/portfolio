@@ -1,7 +1,11 @@
+import { Header } from "../Header";
 import { ILayout } from "./@types";
 
 import * as Styled from "./styles";
 
 export const Layout = ({ children }: ILayout) => (
-  <Styled.Container>{children}</Styled.Container>
+  <Styled.Container>
+    <Header />
+    <>{children}</>
+  </Styled.Container>
 );

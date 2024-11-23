@@ -1,5 +1,3 @@
-import { Layout } from "./views/components";
-
 import { AppProvider } from "./application/contexts/app";
 import { ThemeProvider } from "./application/contexts/theme";
 
@@ -10,9 +8,7 @@ const App = () => (
   <AppProvider>
     <ThemeProvider>
       <GlobalStyles />
-      <Layout>
-        <Routes />
-      </Layout>
+      <Routes />
     </ThemeProvider>
   </AppProvider>
 );

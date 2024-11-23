@@ -1,6 +1,6 @@
 export interface IToggle {
-  state: boolean;
-  setState: React.Dispatch<React.SetStateAction<boolean>>;
+  isToggled: boolean;
+  toggleFunction: () => void;
 }
 
 export interface IContainer {
